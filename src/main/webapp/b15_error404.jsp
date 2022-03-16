@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@page isErrorPage="true" %>
 <% response.setStatus(200); %>
 <!DOCTYPE html>
 <html>
@@ -11,6 +12,7 @@
 <%
 	System.out.println(this.getClass());
 %>
-웹서비스의 404오류에 대한 에러페이지 입니다.
+웹서비스의 404오류에 대한 에러페이지 입니다..<br/>
+오류 내용 [<%= exception.getMessage() %>]
 </body>
 </html>

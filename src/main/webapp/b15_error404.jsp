@@ -13,6 +13,6 @@
 	System.out.println(this.getClass());
 %>
 웹서비스의 404오류에 대한 에러페이지 입니다..<br/>
-오류 내용 [<%= exception.getMessage() %>]
+
 </body>
 </html>

@@ -56,12 +56,12 @@ public class FormEx extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		
 		writer.println("<html><head></head><body>");
-		writer.println("�̸� : " + name + "<br/>");
-		writer.println("���̵� : " + id + "<br/>");
-		writer.println("��й�ȣ : " + pw + "<br/>");
-		writer.println("��� : " + Arrays.toString(hobbys) + "<br/>");
-		writer.println("���� : " + major + "<br/>");
-		writer.println("�������� : " + protocol + "<br/>");
+		writer.println("이름 : " + name + "<br/>");
+		writer.println("아이디 : " + id + "<br/>");
+		writer.println("비밀번호 : " + pw + "<br/>");
+		writer.println("취미 : " + Arrays.toString(hobbys) + "<br/>");
+		writer.println("전공 : " + major + "<br/>");
+		writer.println("프로토콜 : " + protocol + "<br/>");
 		writer.println("</body></hmtl>");
 		
 		writer.close();		

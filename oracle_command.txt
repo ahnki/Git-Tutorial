@@ -1,4 +1,4 @@
-오라클 계정 설정(scott/tiger) oracle account setting
+오라클 계정 설정(scott/tiger)
 SQL>create user scott identified by tiger;
 권한 설정
 SQL>grant connect, resource to scott;
@@ -14,6 +14,7 @@ insert data
 insert into member(id, pw, name, phone) values ('abc', '123', '홍길동', '010-1234-5678');
 insert into member(id, pw, name, phone) values ('def', '456', '홍길순', '010-9012-3456');
 insert into member(id, pw, name, phone) values ('ghi', '789', '홍길자', '010-7890-1234');
+insert into member(id, pw, name, phone) values ('jkl', '123', '홍길명', '010-5678-8965');
 commit;
 
 select * from member;
@@ -23,3 +24,5 @@ delete from member where id = '홍길동';
 update member set pw='000' where id = 'ghi';
 
 drop table member;
+
+JDBC 설정

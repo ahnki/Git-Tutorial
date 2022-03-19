@@ -88,12 +88,13 @@ public class B19_LoginOk extends HttpServlet {
 				return;
 			}
 			
-			if(!pw.equals(getpw)) {
+			if(getpw.length() > 0 && !pw.equals(getpw)) {
+				System.out.println("getpw[" + getpw +"]");
 				System.out.println("password not equal!");
 				response.sendRedirect("b19_login.html");
 				return;
 			}
-
+			
 			HttpSession httpSession = request.getSession();
 			httpSession.setAttribute("name", name);
 			httpSession.setAttribute("id", id);

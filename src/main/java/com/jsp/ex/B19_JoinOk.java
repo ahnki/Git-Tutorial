@@ -69,6 +69,7 @@ public class B19_JoinOk extends HttpServlet {
 				+ name + "', '" + id + "', '" + pw + "', '"
 				+ phone1 + "', '" + phone2 + "', '" + phone3 + "', '"
 				+ gender + "')";
+		System.out.println("query[" + query + "]");
 		
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -88,7 +89,7 @@ public class B19_JoinOk extends HttpServlet {
 			}
 		} catch (Exception e) {
 			System.out.println("fail to connect db");
-			e.printStackTrace();			
+			e.printStackTrace();
 		} finally {
 			try {
 				if(statement != null) statement.close();

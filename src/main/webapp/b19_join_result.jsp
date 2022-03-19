@@ -13,7 +13,12 @@
 <%
 	System.out.println("b19_joinResult.jsp");
 	Cookie[] cookies = request.getCookies();
-		
+	
+	if(cookies.length <= 0){
+		System.out.println("no cookie!");
+		response.sendRedirect("b19_join.html");
+	}
+	
 	for(int i = 0; i < cookies.length; i++){
 		String str = cookies[i].getName();
 		if(str.equals("NAME")){
@@ -22,8 +27,11 @@
 			break;
 		} else {
 			name = "";
+			//cookies[i].setMaxAge(0);
+			//response.addCookie(cookies[i]);
 		}
 	}
+	
 	
 	if(name.length() <= 0){
 		response.sendRedirect("b19_join.html");

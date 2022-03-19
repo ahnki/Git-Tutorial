@@ -87,14 +87,14 @@ public class B19_JoinOk extends HttpServlet {
 				response.sendRedirect("b19_join.html");
 			}
 		} catch (Exception e) {
-			System.out.println("db processing error!!");
+			System.out.println("fail to connect db");
 			e.printStackTrace();			
 		} finally {
 			try {
 				if(statement != null) statement.close();
 				if(connection != null) connection.close();
 			} catch(Exception e1) {
-				System.out.println("last processing error!");
+				System.out.println("fail to disconnect db");
 				e1.printStackTrace();
 			}
 		}

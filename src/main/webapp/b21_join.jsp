@@ -5,9 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>membership certification program</title>
+<script type="text/javascript" src="b21_members.js"></script>
 </head>
 <body>
-<form action="b21_join_ok.jsp" method="post" name="req_frm">
+<form action="b21_join_ok.jsp" method="post" name="reg_frm">
 	아이디 : <input type="text" name="id" size="20"><br/>
 	비밀번호 : <input type="password" name="pw" size="20"><br/>
 	비밀번호 확인 : <input type="password" name="pw_check" size="20"><br/>

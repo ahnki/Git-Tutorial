@@ -34,6 +34,8 @@ public class B21_MemberDao {
 		PreparedStatement pstmt = null;
 		String query = "insert into members values (?,?,?,?,?,?)";
 		
+		System.out.println("insertMember() : query[" + query + "]");
+		
 		try {
 			connection = getConnection();
 			pstmt = connection.prepareStatement(query);
@@ -43,7 +45,14 @@ public class B21_MemberDao {
 			pstmt.setString(4, dto.geteMail());
 			pstmt.setTimestamp(5, dto.getrDate());
 			pstmt.setString(6, dto.getAddress());
-			ri = B21_MemberDao.MEMBER_JOIN_SUCCESS;
+			int i = pstmt.executeUpdate();
+			System.out.println("executeUpdate() : i[" + i + "]");
+			
+			if(i == 1) {			
+				ri = B21_MemberDao.MEMBER_JOIN_SUCCESS;
+			} else {
+				ri = B21_MemberDao.MEMBER_JOIN_FAIL;
+			}
 		} catch(Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -66,6 +75,8 @@ public class B21_MemberDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String query = "select id from members where id = ?";
+		
+		System.out.println("confirmId() : query[" + query + "]");
 		
 		try {
 			connection = getConnection();
@@ -102,6 +113,8 @@ public class B21_MemberDao {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		String query = "select pw from members where id = ?";
+		
+		System.out.println("userCheck() : query[" + query + "]");
 		
 		try {
 			connection = getConnection();

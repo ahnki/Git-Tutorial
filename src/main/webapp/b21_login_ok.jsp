@@ -25,6 +25,8 @@
 <%
 	} else if(checkRV == B21_MemberDao.MEMBER_LOGIN_SUCCESS){
 		B21_MemberDto dto = dao.getMember(id);
+		
+		if(dto == null){
 	}
 %>
 <!DOCTYPE html>

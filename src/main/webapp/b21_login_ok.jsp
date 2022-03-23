@@ -1,3 +1,4 @@
+<%@page import="com.jsp.ex.B21_MemberDto"%>
 <%@page import="com.jsp.ex.B21_MemberDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -27,8 +28,22 @@
 		B21_MemberDto dto = dao.getMember(id);
 		
 		if(dto == null){
-	}
 %>
+<script type="text/javascript">
+	alert("존재하지 않는 회원입니다.");
+	history.go(-1);
+</script>
+<%			
+		} else {
+			String name = dto.getName();
+			session.setAttribute("id", id);
+			session.setAttribute("name", name);
+			session.setAttribute("ValidMem", "yes");
+			response.sendRedirect("b21_main.jsp");
+		}
+	} 
+%>
+
 <!DOCTYPE html>
 <html>
 <head>

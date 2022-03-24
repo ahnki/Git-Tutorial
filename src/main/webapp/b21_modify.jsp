@@ -13,6 +13,7 @@
 <head>
 <meta charset="UTF-8">
 <title>membership certification program</title>
+<script type="text/javascript" src="b21_members.js"></script>
 </head>
 <body>
 <form action="b21_modify_ok.jsp" method="post" name="reg_frm">

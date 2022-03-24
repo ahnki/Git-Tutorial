@@ -5,7 +5,7 @@
 <jsp:useBean id="dto" class="com.jsp.ex.B21_MemberDto"></jsp:useBean>
 <jsp:setProperty property="*" name="dto"/>
 <%
-	dto.setId(session.getAttribute("id"));
+	dto.setId((String)session.getAttribute("id"));
 	B21_MemberDao dao = B21_MemberDao.getInstance();
 	if(dao.confirmId(dto.getId()) == B21_MemberDao.MEMBER_NONEXISTENT){
 %>

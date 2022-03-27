@@ -12,6 +12,7 @@
 	request.setAttribute("id", "abcde");
 	request.setAttribute("pw", "12345");
 	
+	
 	response.sendRedirect("RequestObj");
 %>
 </body>

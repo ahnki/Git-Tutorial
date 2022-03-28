@@ -3,6 +3,8 @@ SQL>create user scott identified by tiger;
 권한 설정
 SQL>grant connect, resource to scott;
 
+SQL>sqlplus scott/tiger
+
 table create
 create table member(
 id varchar2(20) primary key,
@@ -26,3 +28,6 @@ update member set pw='000' where id = 'ghi';
 drop table member;
 
 JDBC 설정
+D:\devapp\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc6_g.jar
+--> 복사
+D:\devapp\Java\jre1.8.0_311\lib\ext\ojdbc6_g.jar

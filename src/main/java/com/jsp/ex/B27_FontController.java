@@ -27,7 +27,7 @@ public class B27_FontController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		System.out.println("B27_FrontController : doGet");
 		actionDo(request, response);
 	}
@@ -44,5 +44,32 @@ public class B27_FontController extends HttpServlet {
 
 	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("B27_FrontController : actionDo");
+		
+		request.setCharacterEncoding("EUC-8");
+		
+		String viewPage = null;
+		//B27_Command command = null;
+		
+		String uri = request.getRequestURI();
+		String conPath = request.getContextPath();
+		String com = uri.substring(conPath.length());
+		
+		System.out.println("uri : " + uri);
+		System.out.println("context path : " + conPath);
+		System.out.println("command : " + com);
+		
+		if(com.equals("/b27_write_view.do")) {
+			System.out.println("/b27_write_view.do");
+			viewPage = "b27_write_view.jsp";
+		} else if (com.equals("/update.do")) {
+			System.out.println("update");
+			System.out.println("=======================");
+		} else if (com.equals("/select.do")) {
+			System.out.println("select");
+			System.out.println("=======================");
+		} else if (com.equals("/delete.do")){
+			System.out.println("delete");
+			System.out.println("=======================");
+		}
 	}
 }

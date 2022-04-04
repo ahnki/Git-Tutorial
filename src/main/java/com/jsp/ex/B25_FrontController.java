@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class B25_FrontController
  */
-@WebServlet("*.do")
+@WebServlet("/FC")
 public class B25_FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -28,7 +28,7 @@ public class B25_FrontController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		System.out.println("doGet");
+		System.out.println("B25_FrontController.java : doGet");
 		actionDo(request, response);
 	}
 
@@ -37,8 +37,8 @@ public class B25_FrontController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		System.out.println("doPost");
+		//doGet(request, response);
+		System.out.println("B25_FrontController.java : doPost");
 		actionDo(request, response);
 	}
 
